@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:background="@android:color/holo_red_light"
-    android:layout_height="match_parent"
-    tools:context=".fragment.DetailFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="varNewsDataDetail"
+            type="com.canonal.newsapp.model.NewsData" />
+    </data>
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:text="DetailFragment" />
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_light"
+        tools:context=".fragment.DetailFragment">
 
-</FrameLayout>
+
+        <TextView
+            android:id="@+id/tvNewsTitleDetail"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text="@{varNewsDataDetail.newsTitle}" />
+
+    </FrameLayout>
+</layout>
