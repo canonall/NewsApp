@@ -7,6 +7,7 @@
         <variable
             name="varNewsDataDetail"
             type="com.canonal.newsapp.model.NewsData" />
+
     </data>
 
     <RelativeLayout
@@ -14,12 +15,20 @@
         android:layout_height="match_parent"
         tools:context=".fragment.DetailFragment">
 
+        <ImageView
+            android:id="@+id/ivDetailHeader"
+            android:layout_width="match_parent"
+            android:layout_height="197dp"
+            android:scaleType="fitCenter"
+            android:src="@{varNewsDataDetail.image}" />
+
         <TextView
             android:id="@+id/tvNewsTitleDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_below="@id/ivDetailHeader"
             android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:text="@{varNewsDataDetail.newsTitle}"
             android:textColor="@color/black"
@@ -36,6 +45,7 @@
             android:text="@{varNewsDataDetail.newsText}"
             android:textColor="@color/gray"
             android:textSize="15sp" />
+
 
     </RelativeLayout>
 </layout>

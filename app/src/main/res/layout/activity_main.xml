@@ -16,7 +16,7 @@
         <TextView
             android:id="@+id/tvDummy"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="30dp"
             android:background="@color/nbaBlue"
             android:gravity="center"
             android:text="@{tvDummyText}"

@@ -44,7 +44,7 @@ class TypeOneFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(newsData: NewsData) =
+        fun newInstance(newsData: NewsData?) =
             TypeOneFragment().apply {
                 arguments = Bundle().apply {
                     putParcelable(NEWS_DATA,newsData)

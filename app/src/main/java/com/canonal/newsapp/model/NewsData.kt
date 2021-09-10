@@ -2,6 +2,7 @@ package com.canonal.newsapp.model
 
 
 
+import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.os.Parcelable
 import android.widget.ImageView
