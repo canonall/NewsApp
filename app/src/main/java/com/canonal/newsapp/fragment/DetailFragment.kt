@@ -22,7 +22,7 @@ class DetailFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            newsData = it.getParcelable(NEWS_DATA)
+            newsData = it.getSerializable(NEWS_DATA) as NewsData?
 
         }
 
@@ -51,7 +51,7 @@ class DetailFragment : Fragment() {
         fun newInstance(newsData: NewsData?) =
             DetailFragment().apply {
                 arguments = Bundle().apply {
-                    putParcelable(NEWS_DATA, newsData)
+                    putSerializable(NEWS_DATA, newsData)
 
                 }
             }

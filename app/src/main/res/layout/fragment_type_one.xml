@@ -36,12 +36,23 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <View
-            android:layout_marginTop="3dp"
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/tvNewsTitle"
+            android:layout_alignStart="@id/tvNewsTitle"
+            android:text="@{varNewsData.date}"
+            android:textColor="@color/gray"
+            android:textSize="11sp"
+            android:textStyle="italic" />
+
+        <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#c0c0c0"/>
+            android:layout_below="@id/tvDate"
+            android:layout_marginTop="3dp"
+            android:background="#c0c0c0" />
 
 
     </RelativeLayout>

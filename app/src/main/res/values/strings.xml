@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">NewsApp</string>
+
+    <string name="headline">Latest NBA Headlines</string>
     <string name="type_one_title">What to expect from Anthony Davis this season?</string>
     <string name="type_two_title">Luka Doncic\'s future in Dallas Mavericks</string>
     <string name="type_three_title">Russell Westbrook is traded to Los Angeles Lakers</string>
 
-    <string name="type_one_detail">What to expect from Anthony Davis this season?</string>
-    <string name="type_two_detail">Luka Doncic\'s future in Dallas Mavericks</string>
-    <string name="type_three_detail">Russell Westbrook is traded to Los Angeles Lakers</string>
-
     <string name="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
+    <string name="date1">"10/09/21"</string>
+    <string name="date2">"5/09/21"</string>
+    <string name="date3">"21/08/21"</string>
 </resources>

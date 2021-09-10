@@ -27,8 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ivDetailHeader"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:text="@{varNewsDataDetail.newsTitle}"
             android:textColor="@color/black"
@@ -45,6 +45,18 @@
             android:text="@{varNewsDataDetail.newsText}"
             android:textColor="@color/gray"
             android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNewsTextDetail"
+            android:layout_alignStart="@id/tvNewsTitleDetail"
+            android:layout_marginTop="8dp"
+            android:text="@{varNewsDataDetail.date}"
+            android:textColor="@color/gray"
+            android:textSize="11sp"
+            android:textStyle="italic" />
 
 
     </RelativeLayout>

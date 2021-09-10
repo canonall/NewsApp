@@ -19,41 +19,51 @@ class MainActivity : AppCompatActivity() {
     private var detailFragment = DetailFragment()
     private var typeOneFragment = TypeOneFragment()
     private var typeOneFragment2 = TypeOneFragment()
+    private var typeOneFragment3 = TypeOneFragment()
     private var typeTwoFragment = TypeTwoFragment()
     private var typeTwoFragment2 = TypeTwoFragment()
+    private var typeTwoFragment3 = TypeTwoFragment()
     private var typeThreeFragment = TypeThreeFragment()
     private var typeThreeFragment2 = TypeThreeFragment()
+    private var typeThreeFragment3 = TypeThreeFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.tvDummyText = "Latest NBA Headlines"
+        binding.tvDummyText = resources.getString(R.string.headline)
 
         val newsData1 = NewsData(
             resources.getString(R.string.type_one_title),
             resources.getString(R.string.lorem),
-            ResourcesCompat.getDrawable(resources, R.drawable.type_one_image, null)
+            ResourcesCompat.getDrawable(resources, R.drawable.type_one_image, null),
+            resources.getString(R.string.date1)
         )
          typeOneFragment = TypeOneFragment.newInstance(newsData1)
          typeOneFragment2= TypeOneFragment.newInstance(newsData1)
+         typeOneFragment3= TypeOneFragment.newInstance(newsData1)
 
         val newsData2 = NewsData(
             resources.getString(R.string.type_two_title),
             resources.getString(R.string.lorem),
-            ResourcesCompat.getDrawable(resources, R.drawable.type_two_image, null)
+            ResourcesCompat.getDrawable(resources, R.drawable.type_two_image, null),
+            resources.getString(R.string.date2)
+
         )
          typeTwoFragment = TypeTwoFragment.newInstance(newsData2)
          typeTwoFragment2 = TypeTwoFragment.newInstance(newsData2)
+         typeTwoFragment3 = TypeTwoFragment.newInstance(newsData2)
 
         val newsData3 = NewsData(
             resources.getString(R.string.type_three_title),
             resources.getString(R.string.lorem),
-            ResourcesCompat.getDrawable(resources, R.drawable.type_three_image, null)
+            ResourcesCompat.getDrawable(resources, R.drawable.type_three_image, null),
+            resources.getString(R.string.date3)
         )
          typeThreeFragment = TypeThreeFragment.newInstance(newsData3)
          typeThreeFragment2 = TypeThreeFragment.newInstance(newsData3)
+         typeThreeFragment3 = TypeThreeFragment.newInstance(newsData3)
 
         createFragments(
             typeOneFragment,
@@ -61,7 +71,11 @@ class MainActivity : AppCompatActivity() {
             typeThreeFragment,
             typeOneFragment2,
             typeTwoFragment2,
-            typeThreeFragment2)
+            typeThreeFragment2,
+            typeOneFragment3,
+            typeTwoFragment3,
+            typeThreeFragment3,
+        )
 
         //When clicked a fragment remove others and open detail fragment
         binding.frmTypeOneFragmentContainer.setOnClickListener {
@@ -83,6 +97,15 @@ class MainActivity : AppCompatActivity() {
         binding.frmTypeThreeFragmentContainer2.setOnClickListener {
             handleClick(typeThreeFragment2)
         }
+        binding.frmTypeOneFragmentContainer3.setOnClickListener {
+            handleClick(typeOneFragment3)
+        }
+        binding.frmTypeTwoFragmentContainer3.setOnClickListener {
+            handleClick(typeTwoFragment3)
+        }
+        binding.frmTypeThreeFragmentContainer3.setOnClickListener {
+            handleClick(typeThreeFragment3)
+        }
 
     }
 
@@ -93,7 +116,10 @@ class MainActivity : AppCompatActivity() {
             typeThreeFragment,
             typeOneFragment2,
             typeTwoFragment2,
-            typeThreeFragment2
+            typeThreeFragment2,
+            typeOneFragment3,
+            typeTwoFragment3,
+            typeThreeFragment3
         )
         disableClick()
         bringDetailFragment(clickedFragment)
@@ -106,7 +132,10 @@ class MainActivity : AppCompatActivity() {
         typeThreeFragment: TypeThreeFragment,
         typeOneFragment2: TypeOneFragment,
         typeTwoFragment2: TypeTwoFragment,
-        typeThreeFragment2: TypeThreeFragment
+        typeThreeFragment2: TypeThreeFragment,
+        typeOneFragment3: TypeOneFragment,
+        typeTwoFragment3: TypeTwoFragment,
+        typeThreeFragment3: TypeThreeFragment
     ) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.add(binding.frmTypeOneFragmentContainer.id, typeOneFragment)
@@ -115,6 +144,9 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.add(binding.frmTypeOneFragmentContainer2.id, typeOneFragment2)
         fragmentTransaction.add(binding.frmTypeTwoFragmentContainer2.id, typeTwoFragment2)
         fragmentTransaction.add(binding.frmTypeThreeFragmentContainer2.id, typeThreeFragment2)
+        fragmentTransaction.add(binding.frmTypeOneFragmentContainer3.id, typeOneFragment3)
+        fragmentTransaction.add(binding.frmTypeTwoFragmentContainer3.id, typeTwoFragment3)
+        fragmentTransaction.add(binding.frmTypeThreeFragmentContainer3.id, typeThreeFragment3)
         fragmentTransaction.commit()
     }
 
@@ -124,7 +156,10 @@ class MainActivity : AppCompatActivity() {
         typeThreeFragment: TypeThreeFragment,
         typeOneFragment2: TypeOneFragment,
         typeTwoFragment2: TypeTwoFragment,
-        typeThreeFragment2: TypeThreeFragment
+        typeThreeFragment2: TypeThreeFragment,
+        typeOneFragment3: TypeOneFragment,
+        typeTwoFragment3: TypeTwoFragment,
+        typeThreeFragment3: TypeThreeFragment
     ) {
 
         val fragmentTransaction = supportFragmentManager.beginTransaction()
@@ -134,6 +169,9 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.remove(typeOneFragment2)
         fragmentTransaction.remove(typeTwoFragment2)
         fragmentTransaction.remove(typeThreeFragment2)
+        fragmentTransaction.remove(typeOneFragment3)
+        fragmentTransaction.remove(typeTwoFragment3)
+        fragmentTransaction.remove(typeThreeFragment3)
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
     }
