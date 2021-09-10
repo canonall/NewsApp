@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="nbaBlue">#1d428a</color>
+    <color name="nbaBlueDark">#001c5c</color>
+    <color name="nbaBlueLight">#556cbb</color>
+    <color name="gray">#d3d3d3 </color>
 </resources>

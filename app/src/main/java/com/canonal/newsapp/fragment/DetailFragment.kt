@@ -42,7 +42,7 @@ class DetailFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(newsData: NewsData) =
+        fun newInstance(newsData: NewsData?) =
             DetailFragment().apply {
                 arguments = Bundle().apply {
                     putParcelable(NEWS_DATA, newsData)

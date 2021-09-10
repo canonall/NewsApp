@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="tvDummyText"
             type="String" />
@@ -14,9 +15,12 @@
 
         <TextView
             android:id="@+id/tvDummy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{tvDummyText}" />
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/nbaBlue"
+            android:gravity="center"
+            android:text="@{tvDummyText}"
+            android:textColor="@color/white" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -39,6 +43,11 @@
 
                 <FrameLayout
                     android:id="@+id/frmTypeThreeFragmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <FrameLayout
+                    android:id="@+id/frmTypeOneFragmentContainer2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 

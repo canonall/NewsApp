@@ -9,16 +9,41 @@
             type="com.canonal.newsapp.model.NewsData" />
     </data>
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_orange_light"
         tools:context=".fragment.TypeTwoFragment">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:text="@{varNewsData.newsTitle}" />
+        <ImageView
+            android:layout_marginTop="3dp"
+            android:id="@+id/ivTypeTwoImage"
+            android:layout_width="150dp"
+            android:layout_height="84dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/type_two_image"
+            android:scaleType="fitCenter" />
 
-    </FrameLayout>
+        <TextView
+            android:id="@+id/tvNewsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivTypeTwoImage"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/ivTypeTwoImage"
+            android:text="@{varNewsData.newsTitle}"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <View
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/ivTypeTwoImage"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
+
+    </RelativeLayout>
 </layout>

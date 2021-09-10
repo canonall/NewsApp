@@ -7,24 +7,42 @@
         <variable
             name="varNewsData"
             type="com.canonal.newsapp.model.NewsData" />
+
     </data>
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_green_dark"
         tools:context=".fragment.TypeOneFragment">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:id="@+id/ivTypeOneImage"
+            android:layout_width="match_parent"
+            android:layout_height="197dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/type_one_image"
+            android:scaleType="fitCenter" />
 
         <TextView
             android:id="@+id/tvNewsTitle"
             android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:text="@{varNewsData.newsTitle}" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivTypeOneImage"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="@{varNewsData.newsTitle}"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/tvNewsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
 
 
-    </FrameLayout>
+    </RelativeLayout>
 </layout>

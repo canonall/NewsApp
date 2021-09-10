@@ -3,23 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="varNewsDataDetail"
             type="com.canonal.newsapp.model.NewsData" />
     </data>
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_red_light"
         tools:context=".fragment.DetailFragment">
-
 
         <TextView
             android:id="@+id/tvNewsTitleDetail"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:text="@{varNewsDataDetail.newsTitle}" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="@{varNewsDataDetail.newsTitle}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
-    </FrameLayout>
+        <TextView
+            android:id="@+id/tvNewsTextDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNewsTitleDetail"
+            android:layout_alignStart="@id/tvNewsTitleDetail"
+            android:layout_alignEnd="@id/tvNewsTitleDetail"
+            android:layout_marginTop="3dp"
+            android:text="@{varNewsDataDetail.newsText}"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
 </layout>
