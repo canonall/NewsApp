@@ -188,6 +188,7 @@ class MainActivity : AppCompatActivity() {
 
         detailFragment = DetailFragment.newInstance(fragmentType)
         val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.setCustomAnimations(R.anim.fade_in,R.anim.slide_in)
         fragmentTransaction.add(binding.frmTypeOneFragmentContainer.id, detailFragment)
         fragmentTransaction.commit()
 
